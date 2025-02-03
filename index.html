@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>초이스올 - 비교 사이트</title>
+    <title>초이스올 - 완전한 비교 시스템</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
             background-color: #f0f8ff;
             color: #333;
             margin: 0;
@@ -37,14 +37,18 @@
             padding: 20px;
             text-align: center;
         }
+        .category-section {
+            margin: 20px 0;
+        }
         .card {
             display: inline-block;
-            width: 200px;
-            margin: 10px;
-            padding: 15px;
+            width: 250px;
+            margin: 15px;
+            padding: 20px;
             background-color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            text-align: center;
         }
         .card img {
             max-width: 100%;
@@ -52,7 +56,7 @@
             border-radius: 8px;
         }
         .card h3 {
-            margin: 10px 0;
+            margin: 15px 0 10px;
             font-size: 18px;
         }
     </style>
@@ -68,36 +72,56 @@
         <a href="#car">자동차</a>
     </nav>
     <div class="container">
-        <section id="it">
+        <section id="it" class="category-section">
             <h2>IT 기기 비교</h2>
             <div class="card">
                 <img src="https://via.placeholder.com/150" alt="IT 기기">
                 <h3>스마트폰</h3>
-                <p>최신 스마트폰 비교하기</p>
+                <p>최신 스마트폰 사양과 가격을 비교해 보세요.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="노트북">
+                <h3>노트북</h3>
+                <p>다양한 노트북 모델을 비교해 보세요.</p>
             </div>
         </section>
-        <section id="travel">
+        <section id="travel" class="category-section">
             <h2>여행지 비교</h2>
             <div class="card">
-                <img src="https://via.placeholder.com/150" alt="여행지">
+                <img src="https://via.placeholder.com/150" alt="파리">
                 <h3>파리</h3>
                 <p>인기 여행지 정보를 비교하세요.</p>
             </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="도쿄">
+                <h3>도쿄</h3>
+                <p>일본 도쿄의 여행 정보를 확인하세요.</p>
+            </div>
         </section>
-        <section id="hotel">
+        <section id="hotel" class="category-section">
             <h2>호텔 비교</h2>
             <div class="card">
-                <img src="https://via.placeholder.com/150" alt="호텔">
+                <img src="https://via.placeholder.com/150" alt="럭셔리 호텔">
                 <h3>럭셔리 호텔</h3>
                 <p>최고의 호텔을 찾아보세요.</p>
             </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="저렴한 호텔">
+                <h3>저렴한 호텔</h3>
+                <p>가성비 좋은 호텔을 비교해 보세요.</p>
+            </div>
         </section>
-        <section id="car">
+        <section id="car" class="category-section">
             <h2>자동차 비교</h2>
             <div class="card">
-                <img src="https://via.placeholder.com/150" alt="자동차">
+                <img src="https://via.placeholder.com/150" alt="세단">
                 <h3>세단</h3>
-                <p>자동차 모델별 비교하기</p>
+                <p>다양한 세단 모델을 확인하세요.</p>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="SUV">
+                <h3>SUV</h3>
+                <p>SUV 차량을 비교해 보세요.</p>
             </div>
         </section>
     </div>
