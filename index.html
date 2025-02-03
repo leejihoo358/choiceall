@@ -2,10 +2,104 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>초이스올</title>
-<link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>초이스올 - 비교 사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #0056b3;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .card {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            padding: 15px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+    </style>
 </head>
 <body>
-    <h1>초이스올에 오신 것을 환영합니다!</h1>
+    <header>
+        <h1>초이스올에 오신 것을 환영합니다!</h1>
+    </header>
+    <nav>
+        <a href="#it">IT 기기</a>
+        <a href="#travel">여행지</a>
+        <a href="#hotel">호텔</a>
+        <a href="#car">자동차</a>
+    </nav>
+    <div class="container">
+        <section id="it">
+            <h2>IT 기기 비교</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="IT 기기">
+                <h3>스마트폰</h3>
+                <p>최신 스마트폰 비교하기</p>
+            </div>
+        </section>
+        <section id="travel">
+            <h2>여행지 비교</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="여행지">
+                <h3>파리</h3>
+                <p>인기 여행지 정보를 비교하세요.</p>
+            </div>
+        </section>
+        <section id="hotel">
+            <h2>호텔 비교</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="호텔">
+                <h3>럭셔리 호텔</h3>
+                <p>최고의 호텔을 찾아보세요.</p>
+            </div>
+        </section>
+        <section id="car">
+            <h2>자동차 비교</h2>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="자동차">
+                <h3>세단</h3>
+                <p>자동차 모델별 비교하기</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
