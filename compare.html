@@ -3,17 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>비교 페이지</title>
+    <title>초이스올 - 비교를 쉽고 간편하게!</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
             text-align: center;
-            margin-top: 100px;
+            padding: 20px;
+        }
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .comparison-box {
+            width: 45%;
+            margin: 0 10px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <h1>비교 페이지</h1>
-    <p>여기에 선택된 카테고리와 비교 기능을 추가할 예정입니다.</p>
+    <p>비교하고 싶은 두 가지 항목을 입력하세요.</p>
+    <div class="comparison-container">
+        <div class="comparison-box">
+            <h2>항목 1</h2>
+            <input type="text" id="item1" placeholder="첫 번째 항목을 입력하세요">
+        </div>
+        <div class="comparison-box">
+            <h2>항목 2</h2>
+            <input type="text" id="item2" placeholder="두 번째 항목을 입력하세요">
+        </div>
+    </div>
+    <button onclick="compareItems()">비교하기</button>
+    <h2 id="result" style="margin-top: 20px;"></h2>
+
+    <script>
+        function compareItems() {
+            const item1 = document.getElementById('item1').value;
+            const item2 = document.getElementById('item2').value;
+            if (item1 && item2) {
+                document.getElementById('result').textContent = `\"${item1}\"와(과) \"${item2}\"를 비교했습니다.`;
+            } else {
+                document.getElementById('result').textContent = '두 항목을 모두 입력해주세요.';
+            }
+        }
+    </script>
 </body>
 </html>
