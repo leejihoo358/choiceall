@@ -1,16 +1,13 @@
 {
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.js"
-    }
-  ],
   "redirects": [
     {
       "source": "/compare",
       "destination": "/compare.html",
       "permanent": true
     }
-  ]
+  ],
+  "rewrites": [],
+  "headers": []
 }
+
 
