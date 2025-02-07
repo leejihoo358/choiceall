@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>초이스올 - 완전한 비교 시스템</title>
+    <title>초이스올 - 맞춤 비교 서비스</title>
     <style>
         body {
             font-family: 'Noto Sans KR', sans-serif;
@@ -15,7 +15,7 @@
         header {
             background-color: #007BFF;
             color: white;
-            padding: 10px 20px;
+            padding: 15px;
             text-align: center;
         }
         nav {
@@ -27,7 +27,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-weight: bold;
         }
         nav a:hover {
@@ -37,93 +37,80 @@
             padding: 20px;
             text-align: center;
         }
-        .category-section {
-            margin: 20px 0;
-        }
-        .card {
+        .category-card {
             display: inline-block;
-            width: 250px;
-            margin: 15px;
+            width: 300px;
+            margin: 20px;
             padding: 20px;
             background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 10px;
             text-align: center;
+            cursor: pointer;
         }
-        .card img {
+        .category-card img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
-        .card h3 {
-            margin: 15px 0 10px;
-            font-size: 18px;
+        .category-card h3 {
+            margin: 20px 0 10px;
+            font-size: 22px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>초이스올에 오신 것을 환영합니다!</h1>
+        <h1>초이스올 - 비교를 쉽고 간편하게!</h1>
     </header>
     <nav>
         <a href="#it">IT 기기</a>
         <a href="#travel">여행지</a>
         <a href="#hotel">호텔</a>
         <a href="#car">자동차</a>
+        <a href="#extra">추가 카테고리</a>
     </nav>
     <div class="container">
         <section id="it" class="category-section">
-            <h2>IT 기기 비교</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="IT 기기">
-                <h3>스마트폰</h3>
-                <p>최신 스마트폰 사양과 가격을 비교해 보세요.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="노트북">
-                <h3>노트북</h3>
-                <p>다양한 노트북 모델을 비교해 보세요.</p>
+            <div class="category-card" onclick="openComparisonPage('IT 기기')">
+                <img src="https://via.placeholder.com/300" alt="IT 기기">
+                <h3>IT 기기 비교</h3>
+                <p>원하는 IT 기기를 검색하여 비교해 보세요.</p>
             </div>
         </section>
         <section id="travel" class="category-section">
-            <h2>여행지 비교</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="파리">
-                <h3>파리</h3>
-                <p>인기 여행지 정보를 비교하세요.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="도쿄">
-                <h3>도쿄</h3>
-                <p>일본 도쿄의 여행 정보를 확인하세요.</p>
+            <div class="category-card" onclick="openComparisonPage('여행지')">
+                <img src="https://via.placeholder.com/300" alt="여행지">
+                <h3>여행지 비교</h3>
+                <p>인기 여행지를 검색하고 비교하세요.</p>
             </div>
         </section>
         <section id="hotel" class="category-section">
-            <h2>호텔 비교</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="럭셔리 호텔">
-                <h3>럭셔리 호텔</h3>
-                <p>최고의 호텔을 찾아보세요.</p>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="저렴한 호텔">
-                <h3>저렴한 호텔</h3>
-                <p>가성비 좋은 호텔을 비교해 보세요.</p>
+            <div class="category-card" onclick="openComparisonPage('호텔')">
+                <img src="https://via.placeholder.com/300" alt="호텔">
+                <h3>호텔 비교</h3>
+                <p>다양한 호텔 옵션을 비교하세요.</p>
             </div>
         </section>
         <section id="car" class="category-section">
-            <h2>자동차 비교</h2>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="세단">
-                <h3>세단</h3>
-                <p>다양한 세단 모델을 확인하세요.</p>
+            <div class="category-card" onclick="openComparisonPage('자동차')">
+                <img src="https://via.placeholder.com/300" alt="자동차">
+                <h3>자동차 비교</h3>
+                <p>차량 모델과 옵션을 쉽게 비교해 보세요.</p>
             </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/150" alt="SUV">
-                <h3>SUV</h3>
-                <p>SUV 차량을 비교해 보세요.</p>
+        </section>
+        <section id="extra" class="category-section">
+            <div class="category-card" onclick="openComparisonPage('추가 카테고리')">
+                <img src="https://via.placeholder.com/300" alt="추가 카테고리">
+                <h3>추가 카테고리</h3>
+                <p>다양한 카테고리를 더 검색하고 비교하세요.</p>
             </div>
         </section>
     </div>
+    <script>
+        function openComparisonPage(category) {
+            window.location.href = '/compare?category=' + encodeURIComponent(category);
+        }
+    </script>
 </body>
 </html>
