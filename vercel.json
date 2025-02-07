@@ -1,13 +1,19 @@
 {
   "redirects": [
-    {
-      "source": "/compare",
-      "destination": "/compare.html",
-      "permanent": true
-    }
+      {
+          "source": "/compare",
+          "destination": "/compare.html",
+          "permanent": true
+      }
   ],
-  "rewrites": [],
+  "rewrites": [
+      {
+          "source": "/api/openai",
+          "destination": "/api/openai.js"
+      }
+  ],
   "headers": []
 }
+
 
 
