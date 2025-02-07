@@ -1,19 +1,23 @@
 {
-  "redirects": [
+    "redirects": [
       {
-          "source": "/compare",
-          "destination": "/compare.html",
-          "permanent": true
+        "source": "/compare",
+        "destination": "/compare.html",
+        "permanent": true
       }
-  ],
-  "rewrites": [
+    ],
+    "builds": [
       {
-          "source": "/api/openai",
-          "destination": "/api/openai.js"
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
       }
-  ],
-  "headers": []
-}
-
-
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      }
+    ]
+  }
+  
 
