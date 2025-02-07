@@ -1,23 +1,23 @@
 {
-    "redirects": [
-      {
-        "source": "/compare",
-        "destination": "/compare.html",
-        "permanent": true
-      }
-    ],
-    "builds": [
-      {
-        "src": "api/**/*.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/api/$1"
-      }
-    ]
-  }
-  
+  "redirects": [
+    {
+      "source": "/compare",
+      "destination": "/compare.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ],
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ]
+}
+
 
