@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/compare",
+      "destination": "/compare.html",
+      "statusCode": 200
+    }
+  ]
+}
