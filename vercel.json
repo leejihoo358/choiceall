@@ -3,7 +3,7 @@
     {
       "source": "/compare",
       "destination": "/compare.html",
-      "permanent": true
+      "permanent": true,
       "statusCode": 200
     }
   ]
