@@ -44,6 +44,21 @@
         button:hover {
             background-color: #0056b3;
         }
+        .result-section {
+            margin-top: 20px;
+            text-align: left;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-item {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -60,14 +75,41 @@
         </div>
     </div>
     <button onclick="compareItems()">비교하기</button>
-    <h2 id="result" style="margin-top: 20px;"></h2>
+    <div id="result" class="result-section" style="display:none;"></div>
 
     <script>
-        function compareItems() {
+        async function fetchItemData(item) {
+            // 샘플 API 요청 로직 (OpenAI 및 네이버 API 사용)
+          const apiKey = process.env.OPENAI_API_KEY;
+            const response = await fetch('https://api.openai.com/v1/completions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify({ query: item })
+            });
+            return response.json();
+        }
+
+        async function compareItems() {
             const item1 = document.getElementById('item1').value;
             const item2 = document.getElementById('item2').value;
+
             if (item1 && item2) {
-                document.getElementById('result').textContent = `\"${item1}\"와(과) \"${item2}\"를 비교했습니다.`;
+                document.getElementById('result').style.display = 'block';
+                document.getElementById('result').innerHTML = '<p>데이터를 가져오는 중입니다...</p>';
+
+                const data1 = await fetchItemData(item1);
+                const data2 = await fetchItemData(item2);
+
+                document.getElementById('result').innerHTML = `
+                    <h2>비교 결과</h2>
+                    <div class="feature-item"><strong>${item1} 정보:</strong> ${JSON.stringify(data1.features)}</div>
+                    <div class="feature-item"><strong>${item2} 정보:</strong> ${JSON.stringify(data2.features)}</div>
+                    <div class="feature-item"><strong>어울리는 나이대 추천:</strong> ${data1.recommendedAge} / ${data2.recommendedAge}</div>
+                    <div class="feature-item"><strong>추천 사용자 특징:</strong> ${data1.recommendedUsers} / ${data2.recommendedUsers}</div>
+                `;
             } else {
                 document.getElementById('result').textContent = '두 항목을 모두 입력해주세요.';
             }
