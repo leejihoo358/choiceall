@@ -3,8 +3,7 @@
     {
       "source": "/compare",
       "destination": "/compare.html",
-      "permanent": true,
-      "statusCode": 200
+      "permanent": true
     }
   ]
 }
