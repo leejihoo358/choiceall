@@ -13,8 +13,24 @@
         }
     ],
     "functions": {
-        "api/**/*.js": {
-            "runtime": "nodejs18.x"
+        "api/openai.js": {
+            "runtime": "nodejs18.x",
+            "memory": 128,
+            "maxDuration": 10
         }
-    }
+    },
+    "build": {
+        "env": {
+            "NODE_ENV": "production"
+        }
+    },
+    "routes": [
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/api/(.*)",
+            "dest": "/api/$1"
+        }
+    ]
 }
