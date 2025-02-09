@@ -7,7 +7,7 @@
         }
     ],
     "functions": {
-        "api/**/*.js": {
+        "api/openai.js": {
             "memory": 256,
             "maxDuration": 10
         }
