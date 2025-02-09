@@ -13,18 +13,8 @@
         }
     ],
     "functions": {
-        "api/openai.js": {
-            "runtime": "vercel/node@18.0.0"
+        "api/**/*.js": {
+            "runtime": "nodejs18.x"
         }
-    },
-    "routes": [
-        {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/api/(.*)",
-            "dest": "/api/$1"
-        }
-    ]
+    }
 }
-
