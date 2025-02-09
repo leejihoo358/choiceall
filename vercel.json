@@ -13,8 +13,8 @@
         }
     ],
     "functions": {
-        "api/**/*.js": {
-            "runtime": "nodejs18.x"
+        "api/openai.js": {
+            "use": "@vercel/node"
         }
     }
 }
