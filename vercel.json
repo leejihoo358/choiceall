@@ -1,16 +1,15 @@
 {
   "redirects": [
-    {
-      "source": "/compare",
-      "destination": "/compare.html",
-      "permanent": true
-    }
+      {
+          "source": "/compare",
+          "destination": "/compare.html",
+          "permanent": true
+      }
   ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ]
+  "functions": {
+      "api/*.js": {
+          "runtime": "nodejs18.x"
+      }
+  }
 }
 
