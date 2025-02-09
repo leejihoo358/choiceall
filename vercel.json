@@ -13,9 +13,8 @@
         }
     ],
     "functions": {
-        "api/openai.js": {
-            "runtime": "nodejs14.x"
+        "api/**/*.js": {
+            "runtime": "nodejs18.x"
         }
     }
 }
-
