@@ -14,7 +14,7 @@
     ],
     "functions": {
         "api/openai.js": {
-            "use": "@vercel/node"
+            "runtime": "nodejs18.x"
         }
     }
 }
