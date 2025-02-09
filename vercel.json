@@ -14,14 +14,7 @@
     ],
     "functions": {
         "api/openai.js": {
-            "runtime": "nodejs18.x",
-            "memory": 128,
-            "maxDuration": 10
-        }
-    },
-    "build": {
-        "env": {
-            "NODE_ENV": "production"
+            "runtime": "vercel/node@18.0.0"
         }
     },
     "routes": [
@@ -34,3 +27,4 @@
         }
     ]
 }
+
