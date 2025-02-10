@@ -1,18 +1,18 @@
 {
   "functions": {
-    "api/openai.js": {
-      "runtime": "nodejs18.x"
-    }
+      "api/openai.js": {
+          "runtime": "nodejs18.x"
+      }
   },
+  "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
-  "cleanUrls": true
+      {
+          "source": "/api/(.*)",
+          "destination": "/api/$1"
+      },
+      {
+          "source": "/(.*)",
+          "destination": "/index.html"
+      }
+  ]
 }
