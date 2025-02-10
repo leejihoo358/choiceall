@@ -23,17 +23,13 @@
         {
           "key": "Cache-Control",
           "value": "max-age=0, s-maxage=86400, stale-while-revalidate"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self'; style-src 'self';"
         }
       ]
     }
   ],
   "functions": {
     "api/openai.js": {
-      "runtime": "vercel-node@1.16.0",
+      "runtime": "nodejs18.x",
       "maxDuration": 10,
       "memory": 512
     }
