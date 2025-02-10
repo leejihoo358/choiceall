@@ -1,18 +1,18 @@
 {
-  "functions": {
-      "api/openai.js": {
-          "runtime": "nodejs18.x"
-      }
-  },
-  "cleanUrls": true,
-  "rewrites": [
-      {
-          "source": "/api/(.*)",
-          "destination": "/api/$1"
-      },
-      {
-          "source": "/(.*)",
-          "destination": "/index.html"
-      }
-  ]
+    "functions": {
+        "api/openai.js": {
+            "runtime": "@vercel/node@18.x"
+        }
+    },
+    "cleanUrls": true,
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "/api/$1"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
 }

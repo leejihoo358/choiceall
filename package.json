@@ -1,11 +1,10 @@
 {
   "name": "choiceall",
   "version": "1.0.0",
-  "description": "Choiceall project",
   "engines": {
       "node": "18.x"
   },
   "dependencies": {
-      "node-fetch": "^3.0.0"
+      "@vercel/node": "1.14.0"
   }
 }
