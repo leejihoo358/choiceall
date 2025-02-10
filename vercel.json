@@ -1,18 +1,15 @@
 {
     "functions": {
         "api/openai.js": {
-            "runtime": "vercel/node@18.0.0"
+            "runtime": "vercel/node@18.x"
         }
     },
     "rewrites": [
         {
             "source": "/api/(.*)",
             "destination": "/api/$1"
-        },
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
         }
     ],
-    "cleanUrls": true
+    "cleanUrls": true,
+    "public": "public"
 }
