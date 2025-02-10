@@ -1,25 +1,24 @@
 {
-  "buildCommand": "npm run build",  
-  "outputDirectory": "out",          
-  "public": "public",                
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
   "rewrites": [
     {
-      "source": "/api/(.*)",         
+      "source": "/api/(.*)",
       "destination": "/api/$1"
     }
   ],
   "redirects": [
     {
-      "source": "/compare",          
+      "source": "/compare",
       "destination": "/compare.html",
       "permanent": true
     }
   ],
-  "cleanUrls": true,                 
-  "trailingSlash": false,     
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
-      "source": "/(.*)",             
+      "source": "/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -35,8 +34,8 @@
   "functions": {
     "api/openai.js": {
       "runtime": "nodejs18.x",
-      "maxDuration": 10,              
-      "memory": 512                   
+      "maxDuration": 10,
+      "memory": 512
     }
   }
 }
