@@ -33,7 +33,7 @@
   ],
   "functions": {
     "api/openai.js": {
-      "runtime": "nodejs18.x",
+      "runtime": "vercel-node@1.16.0",
       "maxDuration": 10,
       "memory": 512
     }
