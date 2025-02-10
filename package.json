@@ -1,13 +1,11 @@
 {
-    "name": "choiceall",
-    "version": "1.0.0",
-    "description": "Choiceall project",
-    "main": "index.js",
-    "scripts": {
-        "start": "node index.js"
-    },
-    "engines": {
-        "node": "18.x"
-    },
-    "dependencies": {}
+  "name": "choiceall",
+  "version": "1.0.0",
+  "description": "Choiceall project",
+  "engines": {
+      "node": "18.x"
+  },
+  "dependencies": {
+      "node-fetch": "^3.0.0"
+  }
 }
